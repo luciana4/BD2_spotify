@@ -80,7 +80,7 @@ CREATE TABLE `Biblioteca` (
   `recomendadas` varchar(45) DEFAULT NULL,
   `me_gusta` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_biblioteca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,6 +89,7 @@ CREATE TABLE `Biblioteca` (
 
 LOCK TABLES `Biblioteca` WRITE;
 /*!40000 ALTER TABLE `Biblioteca` DISABLE KEYS */;
+INSERT INTO `Biblioteca` VALUES (2,'Harriet','Tyrone','Jackson'),(3,'Laura','Kieran','Beck'),(4,'Judah','Neville','Sheila'),(5,'Dominic','Kelly','Eve'),(6,'Zelenia','Deacon','Eleanor'),(7,'Gage','Cathleen','Mona'),(8,'Mason','Carl','Risa'),(9,'Calvin','Hedy','Zephr'),(10,'Iola','Kane','Lars'),(11,'Steven','Macaulay','Sydnee'),(12,'Axel','Clarke','Dominique'),(13,'Rajah','Hammett','Aaron'),(14,'Alika','Arden','Vera'),(15,'Jin','Phoebe','Ifeoma'),(16,'Ciara','Merrill','Ciaran'),(17,'Juliet','Lacey','Adele'),(18,'Katell','Brady','Wilma'),(19,'Thaddeus','Nevada','Blair'),(20,'Cole','Maryam','Adara'),(21,'Elijah','Lars','Kitra'),(22,'Calista','Simon','Amy'),(23,'Octavius','Noble','Venus'),(24,'Heather','Barrett','Ishmael'),(25,'Kyle','Sacha','Callum'),(26,'Chandler','Fritz','Zelda'),(27,'Adena','Marcia','Gil'),(28,'Fallon','Nelle','Ciaran'),(29,'Avye','Lois','Amanda'),(30,'Rowan','Macon','Ramona'),(31,'Gisela','Emi','Garrison'),(32,'Francis','Igor','Xenos'),(33,'Liberty','Brynn','Zephr'),(34,'Naomi','Remedios','Nayda'),(35,'Eaton','Troy','Yoshio'),(36,'Ariel','Kristen','Ariel'),(37,'Eden','Calvin','Russell'),(38,'Cheryl','Jason','Bruno'),(39,'Thor','Ross','Riley'),(40,'Keiko','Burton','Kieran'),(41,'Colorado','Erasmus','Vaughan'),(42,'Nyssa','Nasim','Gretchen'),(43,'Nichole','Barclay','Ava'),(44,'Brenden','Fuller','Boris'),(45,'Jack','Jane','Maisie'),(46,'Kieran','Demetrius','Hakeem'),(47,'Elmo','Audrey','Gillian'),(48,'Hedda','Timothy','Amy'),(49,'Aristotle','Sasha','Maggy'),(50,'Wynne','Colton','Camilla'),(51,'Howard','Callum','Wang'),(52,'Lance','Erich','Raphael'),(53,'Demetria','Oliver','Ivan'),(54,'Caldwell','Isaac','Abel'),(55,'Hope','Fiona','Quamar'),(56,'Brenda','Honorato','Knox'),(57,'Natalie','Shelley','Blake'),(58,'Jeremy','Kyle','Cherokee'),(59,'Caesar','Channing','Cheryl'),(60,'Gail','Xerxes','Eleanor'),(61,'Aimee','Ila','Ashton'),(62,'Fitzgerald','Allen','Ria'),(63,'Hayden','Halla','Reuben'),(64,'Genevieve','Ross','Keaton'),(65,'Gretchen','Harding','Jolie'),(66,'Brian','Evangeline','Deirdre'),(67,'Anthony','Murphy','Nerea'),(68,'Salvador','Brynne','Sharon'),(69,'Hedwig','Indigo','Chastity'),(70,'Cassady','Lev','Quinlan'),(71,'Yoko','Orson','Alexander'),(72,'Gregory','Daphne','Jordan'),(73,'Rae','Tallulah','Yuli'),(74,'Jack','Abdul','Jade'),(75,'Barry','Nolan','Jelani'),(76,'Rana','Mufutau','Donovan'),(77,'Althea','Roth','Levi'),(78,'Stewart','Carter','Jennifer'),(79,'Fiona','April','Karleigh'),(80,'Blaze','Belle','Stuart'),(81,'Aurelia','Dennis','Rhoda'),(82,'Quail','Courtney','Reuben'),(83,'Frances','Scott','Chaney'),(84,'Rooney','Althea','Carter'),(85,'Nevada','Malachi','Ryder'),(86,'Aimee','Chaney','Aaron'),(87,'Kitra','Andrew','Medge'),(88,'Ira','Igor','Avram'),(89,'Yolanda','Forrest','Thor'),(90,'Lance','Mechelle','Vincent'),(91,'Steven','Yoshio','Alvin'),(92,'Allistair','Jack','Berk'),(93,'Ursula','Kristen','Lacy'),(94,'Benedict','Keely','Zorita'),(95,'Joel','Travis','Naida'),(96,'Marshall','Caryn','Yardley'),(97,'Solomon','Leonard','Fritz'),(98,'Rachel','Louis','Kimberley'),(99,'Daphne','Richard','Tyrone'),(100,'Janna','Quin','Amethyst'),(101,'Kieran','Lucius','Baxter');
 /*!40000 ALTER TABLE `Biblioteca` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -461,4 +462,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 19:23:01
+-- Dump completed on 2020-05-28 19:33:06
