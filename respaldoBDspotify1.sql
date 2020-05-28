@@ -357,7 +357,7 @@ CREATE TABLE `Rol` (
   KEY `Artista_id_artista` (`Artista_id_artista`),
   CONSTRAINT `Rol_ibfk_1` FOREIGN KEY (`Cuenta_Premium_id_premium`) REFERENCES `Cuenta_Premium` (`id_premium`),
   CONSTRAINT `Rol_ibfk_2` FOREIGN KEY (`Artista_id_artista`) REFERENCES `Artista` (`id_artista`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -366,6 +366,7 @@ CREATE TABLE `Rol` (
 
 LOCK TABLES `Rol` WRITE;
 /*!40000 ALTER TABLE `Rol` DISABLE KEYS */;
+INSERT INTO `Rol` VALUES (2,'Ryan','Signe',2,2),(3,'Morgan','Abbot',3,3),(4,'Joan','Neve',4,4),(5,'Marah','Lydia',5,5),(6,'Quyn','Burke',6,6),(7,'Rashad','Sybill',7,7),(8,'Tanisha','Lucian',8,8),(9,'Quail','Quynn',9,9),(10,'Craig','Phyllis',10,10),(11,'Kimberley','Emery',11,11),(12,'Rae','Reece',12,12),(13,'Darryl','Alyssa',13,13),(14,'Vivian','Colin',14,14),(15,'Bruno','Isaiah',15,15),(16,'Scott','Deanna',16,16),(17,'Slade','Geoffrey',17,17),(18,'Pamela','Xander',18,18),(19,'Yasir','Pandora',19,19),(20,'Dora','Barry',20,20),(21,'Akeem','Myra',21,21),(22,'Dean','Joy',22,22),(23,'Macey','Dean',23,23),(24,'Joshua','Ray',24,24),(25,'Elton','Asher',25,25),(26,'Yoshio','Martena',26,26),(27,'Ignacia','Charity',27,27),(28,'Risa','Colleen',28,28),(29,'Naida','Jennifer',29,29),(30,'Flavia','Camden',30,30),(31,'Walter','Zane',31,31),(32,'Mia','Conan',32,32),(33,'Oren','Ignatius',33,33),(34,'Odessa','Keane',34,34),(35,'Pascale','Zenaida',35,35),(36,'Joelle','Dean',36,36),(37,'Octavius','Priscilla',37,37),(38,'Maisie','Ila',38,38),(39,'Ulric','Orson',39,39),(40,'Ryder','Cecilia',40,40),(41,'McKenzie','Christen',41,41),(42,'Melyssa','Duncan',42,42),(43,'Shelley','Audra',43,43),(44,'Jacqueline','Kay',44,44),(45,'Lucas','Lester',45,45),(46,'Elizabeth','Samuel',46,46),(47,'Hayden','Althea',47,47),(48,'Elvis','Ishmael',48,48),(49,'Amethyst','Samantha',49,49),(50,'Madonna','Xavier',50,50),(51,'Denton','Kieran',51,51),(52,'Holly','Linda',52,52),(53,'Evangeline','Teagan',53,53),(54,'Oleg','Ava',54,54),(55,'Cheryl','Briar',55,55),(56,'Flavia','Farrah',56,56),(57,'Jayme','Tanya',57,57),(58,'Lance','Germaine',58,58),(59,'Kadeem','Zachery',59,59),(60,'Hollee','Katelyn',60,60),(61,'Jermaine','Kieran',61,61),(62,'Clarke','Cheryl',62,62),(63,'Luke','Sophia',63,63),(64,'Tobias','Levi',64,64),(65,'Jarrod','Baker',65,65),(66,'Bryar','April',66,66),(67,'Irma','Cedric',67,67),(68,'Donna','Noelani',68,68),(69,'Evelyn','Pearl',69,69),(70,'Hector','Ayanna',70,70),(71,'Harlan','Chester',71,71),(72,'Garrison','Carson',72,72),(73,'Hammett','Emma',73,73),(74,'August','Rhonda',74,74),(75,'Gwendolyn','Morgan',75,75),(76,'Clinton','Malik',76,76),(77,'Sasha','Sigourney',77,77),(78,'Josephine','Maya',78,78),(79,'Nolan','Mason',79,79),(80,'Dieter','Calvin',80,80),(81,'Ronan','Jeremy',81,81),(82,'Hashim','Wynter',82,82),(83,'Darryl','Macy',83,83),(84,'Nolan','Keefe',84,84),(85,'Brenden','Raymond',85,85),(86,'Martha','Hashim',86,86),(87,'Caldwell','Kellie',87,87),(88,'Breanna','Jillian',88,88),(89,'Upton','Abigail',89,89),(90,'Micah','Adria',90,90),(91,'Lynn','Cecilia',91,91),(92,'Hunter','Ariana',92,92),(93,'Colton','Colorado',93,93),(94,'Samuel','Andrew',94,94),(95,'Isaac','Roth',95,95),(96,'Serina','Nell',96,96),(97,'Lacota','Carly',97,97),(98,'Talon','Lars',98,98),(99,'Isabella','Theodore',99,99),(100,'Harper','Barry',100,100),(101,'Tanisha','Anjolie',101,101);
 /*!40000 ALTER TABLE `Rol` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -467,4 +468,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 20:12:18
+-- Dump completed on 2020-05-28 20:22:53
