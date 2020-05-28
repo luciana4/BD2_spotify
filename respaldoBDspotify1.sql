@@ -162,7 +162,7 @@ CREATE TABLE `Genero` (
   `id_genero` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_genero` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_genero`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -171,6 +171,7 @@ CREATE TABLE `Genero` (
 
 LOCK TABLES `Genero` WRITE;
 /*!40000 ALTER TABLE `Genero` DISABLE KEYS */;
+INSERT INTO `Genero` VALUES (2,'Felix'),(3,'Slade'),(4,'Wallace'),(5,'Bradley'),(6,'Shad'),(7,'Emi'),(8,'Zelenia'),(9,'Matthew'),(10,'Armando'),(11,'Timon'),(12,'Burke'),(13,'Marah'),(14,'Mason'),(15,'Dylan'),(16,'Ursa'),(17,'Phillip'),(18,'Timon'),(19,'Oleg'),(20,'Victor'),(21,'Hunter'),(22,'Kitra'),(23,'Tamara'),(24,'Tarik'),(25,'Aphrodite'),(26,'Suki'),(27,'Hunter'),(28,'Mira'),(29,'Craig'),(30,'Melanie'),(31,'Amal'),(32,'Teagan'),(33,'Gail'),(34,'Judah'),(35,'Macaulay'),(36,'Tyrone'),(37,'Eliana'),(38,'Mikayla'),(39,'Keane'),(40,'August'),(41,'Talon'),(42,'Skyler'),(43,'Leonard'),(44,'Yoshi'),(45,'Colorado'),(46,'Adena'),(47,'Molly'),(48,'Aaron'),(49,'Leo'),(50,'Chaney'),(51,'Wynter'),(52,'Hamilton'),(53,'Cadman'),(54,'Kato'),(55,'Sylvia'),(56,'Kimberley'),(57,'Lyle'),(58,'Xaviera'),(59,'Isabella'),(60,'Nissim'),(61,'Ulysses'),(62,'Flynn'),(63,'Mannix'),(64,'Zephania'),(65,'Nomlanga'),(66,'Jerome'),(67,'Anika'),(68,'Gillian'),(69,'Donovan'),(70,'Ignacia'),(71,'Lester'),(72,'Illana'),(73,'Kameko'),(74,'Quentin'),(75,'Neil'),(76,'Yardley'),(77,'Rhoda'),(78,'Abbot'),(79,'Hadley'),(80,'Casey'),(81,'Gregory'),(82,'Judith'),(83,'Nita'),(84,'Randall'),(85,'Gisela'),(86,'Wing'),(87,'Maggie'),(88,'Ruby'),(89,'Peter'),(90,'Ella'),(91,'Kai'),(92,'Michael'),(93,'Alma'),(94,'Damian'),(95,'Kennedy'),(96,'Wesley'),(97,'Fallon'),(98,'Madaline'),(99,'Hakeem'),(100,'Jana'),(101,'Stewart');
 /*!40000 ALTER TABLE `Genero` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -462,4 +463,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 19:33:06
+-- Dump completed on 2020-05-28 19:49:56
