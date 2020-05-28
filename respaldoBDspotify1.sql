@@ -239,10 +239,10 @@ DROP TABLE IF EXISTS `Paypal`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Paypal` (
   `id_paypal` int(11) NOT NULL AUTO_INCREMENT,
-  `correo` varchar(45) DEFAULT NULL,
+  `correo` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_paypal`),
   UNIQUE KEY `correo` (`correo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -251,6 +251,7 @@ CREATE TABLE `Paypal` (
 
 LOCK TABLES `Paypal` WRITE;
 /*!40000 ALTER TABLE `Paypal` DISABLE KEYS */;
+INSERT INTO `Paypal` VALUES (18,'a.auctor.non@leo.com'),(12,'ac.metus.vitae@scelerisque.com'),(85,'Aliquam@consectetuercursus.co.uk'),(41,'aliquet.sem@aliquetmetusurna.edu'),(4,'amet.consectetuer@Aliquamultricesiaculis.edu'),(78,'amet.ornare.lectus@sedpedeCum.com'),(81,'amet.risus.Donec@eget.net'),(7,'amet.ultricies.sem@sapienCras.net'),(72,'arcu@egetvolutpat.com'),(50,'commodo.auctor.velit@justofaucibuslectus.net'),(19,'condimentum.eget@variuset.edu'),(17,'congue@ipsumprimisin.com'),(43,'congue@tempusmauriserat.com'),(30,'consequat@varius.ca'),(36,'convallis.ante.lectus@sagittis.co.uk'),(15,'Cras.dolor@egetmassa.net'),(57,'cursus.diam@Maurisvelturpis.com'),(5,'cursus@dis.net'),(87,'diam@semper.edu'),(48,'diam@temporerat.com'),(16,'Donec@dui.ca'),(21,'dui.Cum@ipsumdolor.com'),(42,'Duis@augue.co.uk'),(14,'Duis@elitpretiumet.edu'),(26,'eleifend@egestasSed.net'),(46,'elit@sem.co.uk'),(93,'erat.semper.rutrum@tristiquesenectuset.com'),(37,'eros.nec.tellus@vulputatemauris.com'),(23,'et.netus@elit.net'),(54,'et@semper.com'),(38,'et@volutpatNulladignissim.co.uk'),(89,'eu@sociis.com'),(75,'euismod.urna@dignissimMaecenasornare.com'),(83,'feugiat@infelisNulla.ca'),(94,'gravida.Aliquam@dolorsit.com'),(10,'id.blandit.at@pretiumaliquetmetus.org'),(69,'id.enim.Curabitur@aliquet.com'),(55,'id.magna@purus.edu'),(84,'id@ornareplaceratorci.com'),(100,'in.faucibus@elitpharetra.net'),(86,'In.nec.orci@a.ca'),(101,'Integer@ultriciessem.com'),(99,'interdum.Nunc.sollicitudin@euismod.org'),(59,'leo.Vivamus@vitae.net'),(70,'leo@necdiam.edu'),(95,'lorem.semper@enimcommodohendrerit.ca'),(28,'Maecenas.iaculis.aliquet@quis.edu'),(11,'magna.nec@idnunc.org'),(6,'magnis@elitpellentesque.net'),(8,'mauris.aliquam@loremauctor.co.uk'),(39,'mauris.Suspendisse.aliquet@pedeblandit.net'),(53,'metus.eu@posuere.org'),(90,'molestie@NullafacilisisSuspendisse.ca'),(74,'mollis.Duis@euismod.edu'),(44,'mollis.lectus@sitamet.net'),(25,'Morbi.neque.tellus@luctus.co.uk'),(20,'nec@Curabitur.net'),(49,'nec@libero.ca'),(98,'nec@quisurnaNunc.net'),(71,'nisi@cubiliaCurae.com'),(67,'non.sollicitudin.a@pedesagittisaugue.co.uk'),(56,'non@dui.net'),(47,'non@luctussitamet.com'),(45,'nulla.vulputate@laoreetlibero.com'),(79,'odio@euismodetcommodo.net'),(92,'orci.consectetuer@aenim.co.uk'),(33,'orci@Vivamusnibh.edu'),(22,'ornare.placerat@lorem.com'),(60,'pede@enimSed.co.uk'),(52,'pellentesque@aliquetmagna.com'),(40,'pharetra@ultricessitamet.com'),(9,'porttitor.eros@atlacus.edu'),(2,'posuere.at@musProin.net'),(32,'rhoncus.Donec.est@odiosempercursus.ca'),(58,'risus.Nunc.ac@Donecporttitortellus.edu'),(64,'risus.odio@Aenean.net'),(65,'rutrum@ipsum.co.uk'),(96,'sem@penatibuset.net'),(63,'semper.Nam@amet.org'),(61,'sit.amet@pedePraesent.co.uk'),(29,'sit@magna.com'),(76,'sit@Maurisquis.edu'),(91,'sociosqu.ad@ipsum.org'),(88,'sollicitudin.adipiscing.ligula@Nuncsollicitudincommodo.edu'),(80,'Suspendisse.tristique@et.edu'),(51,'tempor@Sedpharetrafelis.net'),(97,'tincidunt.Donec@mus.ca'),(31,'ullamcorper.nisl.arcu@lobortis.co.uk'),(27,'ultrices.Duis@eudui.edu'),(77,'ut.erat@sapienCras.edu'),(68,'Ut.tincidunt.orci@Morbisit.edu'),(3,'varius.ultrices.mauris@diamnuncullamcorper.co.uk'),(34,'varius.ultrices.mauris@placeratCrasdictum.ca'),(35,'vel.faucibus.id@neque.org'),(24,'velit@ipsumcursusvestibulum.com'),(66,'Vestibulum.accumsan.neque@malesuada.co.uk'),(62,'vitae.purus.gravida@cubiliaCurae.net'),(73,'Vivamus@Vestibulum.com'),(13,'volutpat.Nulla@fringillaporttitor.edu'),(82,'vulputate.posuere@Etiamimperdiet.edu');
 /*!40000 ALTER TABLE `Paypal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -469,4 +470,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 20:32:05
+-- Dump completed on 2020-05-28 20:51:47
