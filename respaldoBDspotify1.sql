@@ -26,7 +26,7 @@ CREATE TABLE `Album` (
   `id_album` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_album`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `Album` (
 
 LOCK TABLES `Album` WRITE;
 /*!40000 ALTER TABLE `Album` DISABLE KEYS */;
-INSERT INTO `Album` VALUES (2,'circo soledad'),(3,'oasis'),(4,'future nostalgia'),(5,'real hasta la muerte');
+INSERT INTO `Album` VALUES (2,'circo soledad'),(3,'oasis'),(4,'future nostalgia'),(5,'real hasta la muerte'),(6,'Leah'),(7,'Rhonda'),(8,'Xanthus'),(9,'Pandora'),(10,'Nomlanga'),(11,'Scott'),(12,'Allistair'),(13,'Quinn'),(14,'Stella'),(15,'Hashim'),(16,'Keiko'),(17,'Grace'),(18,'Raphael'),(19,'Kirby'),(20,'Clarke'),(21,'Charity'),(22,'Natalie'),(23,'Patrick'),(24,'Brittany'),(25,'Caryn'),(26,'Cullen'),(27,'Lester'),(28,'Oleg'),(29,'Amery'),(30,'Cullen'),(31,'Mia'),(32,'Anika'),(33,'Carter'),(34,'Raven'),(35,'Alvin'),(36,'Cade'),(37,'Cassidy'),(38,'Pamela'),(39,'Priscilla'),(40,'Kalia'),(41,'Evan'),(42,'Jameson'),(43,'Benedict'),(44,'Paki'),(45,'Tyler'),(46,'Alika'),(47,'Evan'),(48,'Desirae'),(49,'Ira'),(50,'Fritz'),(51,'Kaye'),(52,'Malcolm'),(53,'Portia'),(54,'Nolan'),(55,'Aphrodite'),(56,'Cruz'),(57,'Drew'),(58,'Dana'),(59,'Lillith'),(60,'Kimberley'),(61,'Aretha'),(62,'Gage'),(63,'Tasha'),(64,'Wendy'),(65,'Sybil'),(66,'Leandra'),(67,'Hiram'),(68,'Jada'),(69,'Levi'),(70,'Oleg'),(71,'Veronica'),(72,'Aiko'),(73,'Macey'),(74,'Mohammad'),(75,'Nelle'),(76,'Sierra'),(77,'Kane'),(78,'Deborah'),(79,'Jennifer'),(80,'Brittany'),(81,'Oleg'),(82,'Tate'),(83,'Ivor'),(84,'Laura'),(85,'Priscilla'),(86,'Grady'),(87,'Kirk'),(88,'Kaitlin'),(89,'Cheyenne'),(90,'Sawyer'),(91,'Shay'),(92,'Aristotle'),(93,'Alfonso'),(94,'Jessica'),(95,'Chastity'),(96,'Tyrone'),(97,'Lester'),(98,'Howard'),(99,'Prescott'),(100,'Baker');
 /*!40000 ALTER TABLE `Album` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +54,7 @@ CREATE TABLE `Artista` (
   `numero_disco` int(11) DEFAULT NULL,
   `numero_canciones` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_artista`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,6 +63,7 @@ CREATE TABLE `Artista` (
 
 LOCK TABLES `Artista` WRITE;
 /*!40000 ALTER TABLE `Artista` DISABLE KEYS */;
+INSERT INTO `Artista` VALUES (2,'Caleb','Whitley','2028-03-20',1,33),(3,'Anne','Chavez','2008-01-20',30,79),(4,'MacKensie','Rosales','2011-08-19',83,51),(5,'Slade','Christian','2008-09-19',53,62),(6,'Brian','Mccullough','2026-07-19',47,51),(7,'Maite','Walker','2012-01-21',30,51),(8,'Kirsten','Meadows','2007-07-20',10,5),(9,'Alika','Sampson','2014-02-20',26,2),(10,'Keith','Mitchell','2021-09-20',82,97),(11,'Dane','Suarez','2011-11-19',28,51),(12,'Barry','Rutledge','2017-12-20',99,67),(13,'Willow','Franco','2004-07-20',71,96),(14,'Athena','Chapman','2028-03-21',20,94),(15,'Richard','Fischer','2011-11-19',27,37),(16,'Anthony','Austin','2022-04-21',84,94),(17,'Aretha','Anthony','2025-10-19',36,46),(18,'Alana','Patton','2027-05-20',10,1),(19,'Amanda','Leach','2024-09-20',58,62),(20,'John','Garrison','2002-01-21',9,36),(21,'Allen','Ferguson','2026-05-20',31,79),(22,'Madonna','Reid','2031-10-20',1,60),(23,'Zia','Reeves','2020-05-20',67,93),(24,'Levi','Russell','2023-03-20',80,88),(25,'Yoko','Leonard','2029-03-21',85,4),(26,'Tyrone','Mcguire','2001-01-20',87,53),(27,'Chase','Maxwell','2018-07-20',60,4),(28,'Cain','Solomon','2028-01-20',99,30),(29,'Josiah','Workman','2028-08-20',10,74),(30,'Tad','Allison','2024-06-20',94,54),(31,'Quin','Dickson','2023-04-20',18,4),(32,'Oleg','Rose','2009-06-19',45,65),(33,'Ethan','Anthony','2029-08-20',30,70),(34,'Price','Kramer','2004-04-21',83,72),(35,'Caesar','Robertson','2013-10-19',99,61),(36,'Dieter','Nelson','2016-12-19',7,39),(37,'Mariko','Barrera','2031-10-19',87,76),(38,'Kenyon','Sexton','2019-03-21',65,39),(39,'Shellie','Parks','2006-06-19',89,6),(40,'Leo','Riggs','2028-06-19',28,7),(41,'Julian','Benjamin','2020-08-20',74,27),(42,'Vaughan','Quinn','2013-01-20',69,97),(43,'Darryl','Page','2031-10-20',87,71),(44,'Garrett','Callahan','2026-03-20',24,12),(45,'Vivien','York','2029-05-20',34,77),(46,'Dora','Sweeney','2004-06-19',57,65),(47,'Madaline','Sharpe','2021-05-21',46,42),(48,'Pandora','Conway','2002-10-20',73,86),(49,'Tate','Rasmussen','2009-02-21',62,98),(50,'Kerry','Burton','2029-09-19',41,77),(51,'Noelle','Hopper','2017-01-21',46,54),(52,'Michael','Henry','2012-04-20',20,96),(53,'Todd','Brady','2001-07-19',63,87),(54,'Omar','Guerra','2001-12-20',88,67),(55,'Leonard','Reynolds','2003-02-21',25,65),(56,'Deacon','Perry','2015-09-19',48,24),(57,'Lester','Blackwell','2005-03-20',5,49),(58,'Leroy','Sloan','2029-11-19',81,89),(59,'Leilani','Frazier','2020-04-20',83,16),(60,'Anthony','Tucker','2028-11-19',97,79),(61,'Felix','Dudley','2013-11-20',55,43),(62,'Indigo','May','2028-08-19',32,95),(63,'Jonah','Finch','2001-05-20',38,12),(64,'Urielle','Merritt','2028-12-19',84,47),(65,'Ursa','Adkins','2001-03-20',40,91),(66,'Jacqueline','Powell','2007-12-20',43,28),(67,'Levi','Quinn','2029-07-20',67,53),(68,'Solomon','Cook','2005-02-21',34,24),(69,'Alec','Delaney','2029-03-20',96,7),(70,'Summer','Woods','2016-06-19',39,88),(71,'Ray','Collier','2004-06-19',19,36),(72,'Matthew','Gillespie','2028-11-20',65,29),(73,'Ahmed','Ruiz','2023-08-19',85,11),(74,'Hanae','Carr','2027-10-20',93,88),(75,'Chava','Tucker','2024-10-19',79,51),(76,'Keelie','Reid','2024-02-20',33,93),(77,'Rogan','Randolph','2002-08-20',24,38),(78,'Morgan','Sherman','2013-08-19',57,89),(79,'Idona','Hicks','2025-10-20',31,97),(80,'Christen','Johns','2011-04-20',91,53),(81,'Remedios','Wilson','2010-12-19',33,53),(82,'Catherine','Hodges','2023-02-21',75,99),(83,'Madison','Lynch','2017-12-19',4,52),(84,'Wendy','Randall','2012-09-19',95,51),(85,'Isabella','Boyer','2019-03-20',82,65),(86,'Hilel','Osborn','2018-12-20',80,24),(87,'Amir','Mitchell','2001-07-19',68,19),(88,'Alika','Brooks','2012-04-20',2,76),(89,'Tatum','Fowler','2001-02-21',99,37),(90,'Galena','Bentley','2007-12-19',11,13),(91,'Eric','Hoover','2017-03-20',75,44),(92,'Imelda','Hurley','2026-06-20',34,62),(93,'MacKenzie','Manning','2002-04-20',8,27),(94,'Sylvia','Lawson','2028-04-21',6,72),(95,'Brooke','Talley','2014-04-20',98,32),(96,'Alexis','Ball','2003-10-20',99,9),(97,'Yuli','Reeves','2014-08-20',95,70),(98,'Clayton','Henson','2031-08-20',22,69),(99,'Felicia','Figueroa','2013-03-21',12,93),(100,'Claudia','Elliott','2030-09-19',73,69),(101,'Cathleen','Hopkins','2025-12-20',93,47);
 /*!40000 ALTER TABLE `Artista` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -460,4 +461,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 18:44:29
+-- Dump completed on 2020-05-28 19:23:01
