@@ -210,7 +210,7 @@ DROP TABLE IF EXISTS `Login`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Login` (
   `id_login` int(11) NOT NULL AUTO_INCREMENT,
-  `correo` varchar(45) DEFAULT NULL,
+  `correo` varchar(100) DEFAULT NULL,
   `Red_Social_id_redsocial` int(11) NOT NULL,
   `Usuario_id_Usuario` int(11) NOT NULL,
   PRIMARY KEY (`id_login`),
@@ -218,7 +218,7 @@ CREATE TABLE `Login` (
   KEY `Usuario_id_Usuario` (`Usuario_id_Usuario`),
   CONSTRAINT `Login_ibfk_1` FOREIGN KEY (`Red_Social_id_redsocial`) REFERENCES `Red_Social` (`id_redsocial`),
   CONSTRAINT `Login_ibfk_2` FOREIGN KEY (`Usuario_id_Usuario`) REFERENCES `Usuario` (`id_Usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -227,6 +227,7 @@ CREATE TABLE `Login` (
 
 LOCK TABLES `Login` WRITE;
 /*!40000 ALTER TABLE `Login` DISABLE KEYS */;
+INSERT INTO `Login` VALUES (2,'interdum@tellus.co.uk',2,2),(3,'Aliquam.erat.volutpat@euaccumsansed.net',3,3),(4,'nulla.Integer.urna@dapibus.com',4,4),(5,'Donec@egetmetus.ca',5,5),(6,'enim.Nunc@imperdietnon.net',6,6),(7,'at.sem.molestie@enimcommodohendrerit.org',7,7),(8,'vulputate.lacus.Cras@semeget.co.uk',8,8),(9,'mollis@vitae.edu',9,9),(10,'montes.nascetur@egetipsumDonec.net',10,10),(11,'Nullam.feugiat@eteros.com',11,11);
 /*!40000 ALTER TABLE `Login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -329,7 +330,7 @@ CREATE TABLE `Red_Social` (
   `gmail` varchar(45) NOT NULL,
   `instagram` varchar(45) NOT NULL,
   PRIMARY KEY (`id_redsocial`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -338,6 +339,7 @@ CREATE TABLE `Red_Social` (
 
 LOCK TABLES `Red_Social` WRITE;
 /*!40000 ALTER TABLE `Red_Social` DISABLE KEYS */;
+INSERT INTO `Red_Social` VALUES (2,'Fusce@facilisis.ca','elit.pede@convallis.edu','id.erat@eget.com'),(3,'vitae.aliquet.nec@ac.com','Aenean.eget.metus@Donec.net','arcu@interdum.com'),(4,'parturient@Vivamus.edu','sed@orciconsectetuer.ca','auctor.Mauris@dui.ca'),(5,'Curabitur.egestas.nunc@tellus.net','Nullam.velit.dui@cursusaenim.net','penatibus.et@morbitristique.co.uk'),(6,'nulla.Integer.vulputate@dolor.net','magna@ultriciesdignissim.edu','velit.eu@scelerisque.org'),(7,'egestas.nunc@sapien.com','volutpat.ornare@eueleifend.com','Nunc.sollicitudin.commodo@Vivamusnonlorem.net'),(8,'consequat.auctor.nunc@Fuscedolorquam.org','mi.tempor@ametdapibus.org','sem.ut.dolor@iaculislacuspede.co.uk'),(9,'tortor.dictum.eu@sedfacilisisvitae.edu','et.ipsum.cursus@fringillamilacinia.com','eu@urna.co.uk'),(10,'pellentesque@ipsum.org','libero.est@liberolacus.com','taciti.sociosqu@mitempor.org'),(11,'ut@maurisid.co.uk','accumsan@mi.edu','lectus.ante@estarcu.org');
 /*!40000 ALTER TABLE `Red_Social` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -473,4 +475,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 23:29:28
+-- Dump completed on 2020-05-29  1:51:01
