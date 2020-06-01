@@ -468,7 +468,7 @@ DROP TABLE IF EXISTS `Usuario`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Usuario` (
   `id_Usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) DEFAULT NULL,
+  `nombre_usuario` varchar(100) DEFAULT NULL,
   `apellido` varchar(45) DEFAULT NULL,
   `correo` varchar(100) DEFAULT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
@@ -511,32 +511,33 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary table structure for view `canciones_mas_escuchadas1`
+-- Temporary table structure for view `canciones_mas_escuchadas1_1`
 --
 
-DROP TABLE IF EXISTS `canciones_mas_escuchadas1`;
-/*!50001 DROP VIEW IF EXISTS `canciones_mas_escuchadas1`*/;
+DROP TABLE IF EXISTS `canciones_mas_escuchadas1_1`;
+/*!50001 DROP VIEW IF EXISTS `canciones_mas_escuchadas1_1`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE TABLE `canciones_mas_escuchadas1` (
+/*!50001 CREATE TABLE `canciones_mas_escuchadas1_1` (
   `nombre_cancion` tinyint NOT NULL,
   `nombre_album` tinyint NOT NULL,
   `nombre_artista` tinyint NOT NULL,
-  `reproducciones` tinyint NOT NULL
+  `reproducciones` tinyint NOT NULL,
+  `nombre_usuario` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary table structure for view `ingreso_usuarios1`
+-- Temporary table structure for view `ingreso_usuarios1_1`
 --
 
-DROP TABLE IF EXISTS `ingreso_usuarios1`;
-/*!50001 DROP VIEW IF EXISTS `ingreso_usuarios1`*/;
+DROP TABLE IF EXISTS `ingreso_usuarios1_1`;
+/*!50001 DROP VIEW IF EXISTS `ingreso_usuarios1_1`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE TABLE `ingreso_usuarios1` (
+/*!50001 CREATE TABLE `ingreso_usuarios1_1` (
   `fecha` tinyint NOT NULL,
-  `nombre` tinyint NOT NULL,
+  `nombre_usuario` tinyint NOT NULL,
   `cantRegistro` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
@@ -561,11 +562,11 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
--- Final view structure for view `canciones_mas_escuchadas1`
+-- Final view structure for view `canciones_mas_escuchadas1_1`
 --
 
-/*!50001 DROP TABLE IF EXISTS `canciones_mas_escuchadas1`*/;
-/*!50001 DROP VIEW IF EXISTS `canciones_mas_escuchadas1`*/;
+/*!50001 DROP TABLE IF EXISTS `canciones_mas_escuchadas1_1`*/;
+/*!50001 DROP VIEW IF EXISTS `canciones_mas_escuchadas1_1`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -574,17 +575,17 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `canciones_mas_escuchadas1` AS select `Canciones`.`nombre_cancion` AS `nombre_cancion`,`Album`.`nombre_album` AS `nombre_album`,`Artista`.`nombre_artista` AS `nombre_artista`,`Canciones`.`reproducciones` AS `reproducciones` from ((`Canciones` join `Album`) join `Artista`) where `Canciones`.`id_canciones` = `Artista`.`id_artista` and `Album`.`id_album` = `Artista`.`id_artista` and `Canciones`.`reproducciones` > 1000 order by `Canciones`.`reproducciones` */;
+/*!50001 VIEW `canciones_mas_escuchadas1_1` AS select `Canciones`.`nombre_cancion` AS `nombre_cancion`,`Album`.`nombre_album` AS `nombre_album`,`Artista`.`nombre_artista` AS `nombre_artista`,`Canciones`.`reproducciones` AS `reproducciones`,`Usuario`.`nombre_usuario` AS `nombre_usuario` from (((`Canciones` join `Album`) join `Artista`) join `Usuario`) where `Usuario`.`id_Usuario` = `Canciones`.`id_canciones` and `Canciones`.`id_canciones` = `Artista`.`id_artista` and `Album`.`id_album` = `Artista`.`id_artista` and `Canciones`.`reproducciones` > 1000 order by `Canciones`.`reproducciones` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
--- Final view structure for view `ingreso_usuarios1`
+-- Final view structure for view `ingreso_usuarios1_1`
 --
 
-/*!50001 DROP TABLE IF EXISTS `ingreso_usuarios1`*/;
-/*!50001 DROP VIEW IF EXISTS `ingreso_usuarios1`*/;
+/*!50001 DROP TABLE IF EXISTS `ingreso_usuarios1_1`*/;
+/*!50001 DROP VIEW IF EXISTS `ingreso_usuarios1_1`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
@@ -593,7 +594,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `ingreso_usuarios1` AS select `Auditoria`.`fecha` AS `fecha`,`Usuario`.`nombre` AS `nombre`,`Auditoria`.`cantRegistro` AS `cantRegistro` from (`Auditoria` join `Usuario`) where `Auditoria`.`id_auditoria` = `Usuario`.`id_Usuario` order by `Auditoria`.`cantRegistro` desc */;
+/*!50001 VIEW `ingreso_usuarios1_1` AS select `Auditoria`.`fecha` AS `fecha`,`Usuario`.`nombre_usuario` AS `nombre_usuario`,`Auditoria`.`cantRegistro` AS `cantRegistro` from (`Auditoria` join `Usuario`) where `Auditoria`.`cantRegistro` = `Usuario`.`id_Usuario` and `Auditoria`.`id_auditoria` = `Usuario`.`id_Usuario` order by `Auditoria`.`cantRegistro` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -607,4 +608,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-01 19:55:38
+-- Dump completed on 2020-06-01 20:16:41
