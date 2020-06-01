@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `Album`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Album` (
   `id_album` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) DEFAULT NULL,
+  `nombre_album` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_album`)
 ) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -48,7 +48,7 @@ DROP TABLE IF EXISTS `Artista`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Artista` (
   `id_artista` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) DEFAULT NULL,
+  `nombre_artista` varchar(100) DEFAULT NULL,
   `apellido` varchar(45) DEFAULT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
   `numero_disco` int(11) DEFAULT NULL,
@@ -65,6 +65,35 @@ LOCK TABLES `Artista` WRITE;
 /*!40000 ALTER TABLE `Artista` DISABLE KEYS */;
 INSERT INTO `Artista` VALUES (2,'Caleb','Whitley','2028-03-20',1,33),(3,'Anne','Chavez','2008-01-20',30,79),(4,'MacKensie','Rosales','2011-08-19',83,51),(5,'Slade','Christian','2008-09-19',53,62),(6,'Brian','Mccullough','2026-07-19',47,51),(7,'Maite','Walker','2012-01-21',30,51),(8,'Kirsten','Meadows','2007-07-20',10,5),(9,'Alika','Sampson','2014-02-20',26,2),(10,'Keith','Mitchell','2021-09-20',82,97),(11,'Dane','Suarez','2011-11-19',28,51),(12,'Barry','Rutledge','2017-12-20',99,67),(13,'Willow','Franco','2004-07-20',71,96),(14,'Athena','Chapman','2028-03-21',20,94),(15,'Richard','Fischer','2011-11-19',27,37),(16,'Anthony','Austin','2022-04-21',84,94),(17,'Aretha','Anthony','2025-10-19',36,46),(18,'Alana','Patton','2027-05-20',10,1),(19,'Amanda','Leach','2024-09-20',58,62),(20,'John','Garrison','2002-01-21',9,36),(21,'Allen','Ferguson','2026-05-20',31,79),(22,'Madonna','Reid','2031-10-20',1,60),(23,'Zia','Reeves','2020-05-20',67,93),(24,'Levi','Russell','2023-03-20',80,88),(25,'Yoko','Leonard','2029-03-21',85,4),(26,'Tyrone','Mcguire','2001-01-20',87,53),(27,'Chase','Maxwell','2018-07-20',60,4),(28,'Cain','Solomon','2028-01-20',99,30),(29,'Josiah','Workman','2028-08-20',10,74),(30,'Tad','Allison','2024-06-20',94,54),(31,'Quin','Dickson','2023-04-20',18,4),(32,'Oleg','Rose','2009-06-19',45,65),(33,'Ethan','Anthony','2029-08-20',30,70),(34,'Price','Kramer','2004-04-21',83,72),(35,'Caesar','Robertson','2013-10-19',99,61),(36,'Dieter','Nelson','2016-12-19',7,39),(37,'Mariko','Barrera','2031-10-19',87,76),(38,'Kenyon','Sexton','2019-03-21',65,39),(39,'Shellie','Parks','2006-06-19',89,6),(40,'Leo','Riggs','2028-06-19',28,7),(41,'Julian','Benjamin','2020-08-20',74,27),(42,'Vaughan','Quinn','2013-01-20',69,97),(43,'Darryl','Page','2031-10-20',87,71),(44,'Garrett','Callahan','2026-03-20',24,12),(45,'Vivien','York','2029-05-20',34,77),(46,'Dora','Sweeney','2004-06-19',57,65),(47,'Madaline','Sharpe','2021-05-21',46,42),(48,'Pandora','Conway','2002-10-20',73,86),(49,'Tate','Rasmussen','2009-02-21',62,98),(50,'Kerry','Burton','2029-09-19',41,77),(51,'Noelle','Hopper','2017-01-21',46,54),(52,'Michael','Henry','2012-04-20',20,96),(53,'Todd','Brady','2001-07-19',63,87),(54,'Omar','Guerra','2001-12-20',88,67),(55,'Leonard','Reynolds','2003-02-21',25,65),(56,'Deacon','Perry','2015-09-19',48,24),(57,'Lester','Blackwell','2005-03-20',5,49),(58,'Leroy','Sloan','2029-11-19',81,89),(59,'Leilani','Frazier','2020-04-20',83,16),(60,'Anthony','Tucker','2028-11-19',97,79),(61,'Felix','Dudley','2013-11-20',55,43),(62,'Indigo','May','2028-08-19',32,95),(63,'Jonah','Finch','2001-05-20',38,12),(64,'Urielle','Merritt','2028-12-19',84,47),(65,'Ursa','Adkins','2001-03-20',40,91),(66,'Jacqueline','Powell','2007-12-20',43,28),(67,'Levi','Quinn','2029-07-20',67,53),(68,'Solomon','Cook','2005-02-21',34,24),(69,'Alec','Delaney','2029-03-20',96,7),(70,'Summer','Woods','2016-06-19',39,88),(71,'Ray','Collier','2004-06-19',19,36),(72,'Matthew','Gillespie','2028-11-20',65,29),(73,'Ahmed','Ruiz','2023-08-19',85,11),(74,'Hanae','Carr','2027-10-20',93,88),(75,'Chava','Tucker','2024-10-19',79,51),(76,'Keelie','Reid','2024-02-20',33,93),(77,'Rogan','Randolph','2002-08-20',24,38),(78,'Morgan','Sherman','2013-08-19',57,89),(79,'Idona','Hicks','2025-10-20',31,97),(80,'Christen','Johns','2011-04-20',91,53),(81,'Remedios','Wilson','2010-12-19',33,53),(82,'Catherine','Hodges','2023-02-21',75,99),(83,'Madison','Lynch','2017-12-19',4,52),(84,'Wendy','Randall','2012-09-19',95,51),(85,'Isabella','Boyer','2019-03-20',82,65),(86,'Hilel','Osborn','2018-12-20',80,24),(87,'Amir','Mitchell','2001-07-19',68,19),(88,'Alika','Brooks','2012-04-20',2,76),(89,'Tatum','Fowler','2001-02-21',99,37),(90,'Galena','Bentley','2007-12-19',11,13),(91,'Eric','Hoover','2017-03-20',75,44),(92,'Imelda','Hurley','2026-06-20',34,62),(93,'MacKenzie','Manning','2002-04-20',8,27),(94,'Sylvia','Lawson','2028-04-21',6,72),(95,'Brooke','Talley','2014-04-20',98,32),(96,'Alexis','Ball','2003-10-20',99,9),(97,'Yuli','Reeves','2014-08-20',95,70),(98,'Clayton','Henson','2031-08-20',22,69),(99,'Felicia','Figueroa','2013-03-21',12,93),(100,'Claudia','Elliott','2030-09-19',73,69),(101,'Cathleen','Hopkins','2025-12-20',93,47);
 /*!40000 ALTER TABLE `Artista` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Auditoria`
+--
+
+DROP TABLE IF EXISTS `Auditoria`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Auditoria` (
+  `id_auditoria` int(11) NOT NULL AUTO_INCREMENT,
+  `procedimiento` varchar(45) DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL,
+  `Usuario_id_Usuario` int(11) NOT NULL,
+  `cantRegistro` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id_auditoria`),
+  KEY `Usuario_id_Usuario` (`Usuario_id_Usuario`),
+  CONSTRAINT `Auditoria_ibfk_1` FOREIGN KEY (`Usuario_id_Usuario`) REFERENCES `Usuario` (`id_Usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Auditoria`
+--
+
+LOCK TABLES `Auditoria` WRITE;
+/*!40000 ALTER TABLE `Auditoria` DISABLE KEYS */;
+INSERT INTO `Auditoria` VALUES (2,'Colton','2021-02-11 06:13:07',2,2),(3,'Clarke','2014-03-12 17:59:30',3,10),(4,'Otto','2013-07-24 16:47:28',4,4),(5,'Phelan','2020-05-28 11:53:46',5,5),(6,'Kelly','2016-12-22 12:52:22',6,6),(7,'Kevyn','2020-09-15 13:34:35',7,1),(8,'Kevyn','2018-09-06 05:49:53',8,2),(9,'Sheila','2020-11-03 12:25:35',9,4),(10,'Unity','2020-11-23 19:02:39',10,6),(11,'Hyacinth','2021-04-06 05:03:47',11,9),(12,'Harrison','2018-12-22 15:14:37',12,11),(13,'Herrod','2013-05-27 21:50:12',13,12),(14,'Peter','2017-09-05 12:35:07',14,3),(15,'Colin','2019-01-09 12:37:04',15,4),(16,'Rafael','2016-02-20 03:56:41',16,5),(17,'Wing','2015-07-27 07:46:08',17,7),(18,'Caesar','2021-05-27 04:17:51',18,9),(19,'Deborah','2016-06-30 04:55:31',19,7),(20,'Martha','2017-01-17 21:55:31',20,8),(21,'Ursula','2015-02-01 22:39:39',21,12),(22,'Lucius','2021-01-29 09:33:21',22,3),(23,'Allistair','2019-09-14 00:49:51',23,14),(24,'Deborah','2012-12-04 14:33:58',24,1),(25,'Natalie','2017-01-28 04:02:48',25,3),(26,'Keefe','2014-03-06 20:17:00',26,5),(27,'Demetrius','2018-10-31 01:51:16',27,6),(28,'Orli','2018-01-29 16:26:58',28,10),(29,'Illiana','2020-06-23 07:23:40',29,7),(30,'Linus','2016-08-04 15:43:44',30,9),(31,'Brett','2018-12-31 13:25:29',31,6),(32,'Gay','2016-05-02 09:56:11',32,8),(33,'Cain','2021-05-18 17:37:10',33,4),(34,'Shay','2016-06-13 14:44:37',34,3),(35,'Dara','2012-09-29 06:05:41',35,4),(36,'Miriam','2016-03-03 14:25:42',36,6),(37,'Eleanor','2019-04-26 22:44:44',37,7),(38,'Ariel','2019-09-03 23:48:04',38,8),(39,'Kelly','2017-01-20 21:58:36',39,10),(40,'Wanda','2014-05-21 18:59:49',40,1),(41,'Aidan','2016-02-25 02:06:48',41,2),(42,'Summer','2015-01-01 14:29:32',42,4),(43,'Cameron','2013-06-22 13:54:10',43,6),(44,'Xandra','2018-05-20 02:09:59',44,8),(45,'Quinn','2017-04-12 06:48:05',45,9),(46,'Palmer','2018-01-18 14:21:06',46,10),(47,'Cathleen','2015-05-29 07:38:42',47,2),(48,'Dexter','2012-05-16 17:32:48',48,3),(49,'Alma','2015-07-20 16:14:20',49,4),(50,'May','2020-07-21 13:29:36',50,5),(51,'Ava','2019-01-11 04:39:51',51,6),(52,'Caleb','2018-09-09 18:35:50',52,1),(53,'Clare','2018-06-24 18:20:20',53,2),(54,'Hamish','2015-04-07 08:03:41',54,3),(55,'Idona','2012-06-21 10:33:38',55,5),(56,'Reed','2012-04-29 06:28:55',56,6),(57,'Anika','2016-05-25 19:41:21',57,8),(58,'Ainsley','2013-12-16 19:32:18',58,9),(59,'Anastasia','2016-04-18 05:38:12',59,1),(60,'Jeanette','2016-01-04 22:51:43',60,2),(61,'Maris','2017-12-17 05:46:36',61,3),(62,'Jada','2013-02-21 19:35:41',62,4),(63,'Aretha','2020-08-18 15:58:44',63,5),(64,'Vielka','2019-05-17 21:09:18',64,6),(65,'Keith','2018-11-30 01:30:59',65,7),(66,'Janna','2018-12-12 16:29:42',66,8),(67,'Maya','2016-09-10 09:54:25',67,8),(68,'Britanney','2012-12-06 11:08:36',68,9),(69,'Tamara','2021-04-02 23:55:54',69,4),(70,'Daphne','2021-03-27 09:00:43',70,4),(71,'Edan','2013-03-07 08:19:56',71,5),(72,'Jorden','2016-12-13 05:16:56',72,6),(73,'Brian','2016-12-25 03:56:28',73,7),(74,'Merrill','2014-06-22 21:12:32',74,8),(75,'Macaulay','2014-12-03 16:31:36',75,10),(76,'Raven','2012-06-23 02:11:39',76,11),(77,'Thane','2021-05-01 19:00:20',77,6),(78,'Xavier','2018-06-10 23:19:14',78,9),(79,'Phyllis','2012-12-14 08:33:56',79,7),(80,'Rigel','2014-12-14 15:25:37',80,9),(81,'Kendall','2016-08-19 04:01:26',81,8),(82,'Austin','2020-10-08 01:37:27',82,7),(83,'Madeline','2016-10-22 04:29:47',83,6),(84,'Britanney','2019-06-26 13:51:46',84,5),(85,'Amena','2013-07-31 21:41:02',85,4),(86,'Stacey','2019-02-17 18:48:30',86,3),(87,'Herrod','2018-05-26 18:19:07',87,5),(88,'Flynn','2020-06-17 15:36:53',88,8),(89,'Ethan','2018-06-02 00:09:28',89,7),(90,'Selma','2012-05-07 16:22:13',90,4),(91,'Elaine','2016-11-27 03:26:18',91,9),(92,'Trevor','2019-07-26 20:28:12',92,7),(93,'Maia','2019-06-15 00:18:10',93,1),(94,'Austin','2013-05-15 22:17:58',94,2),(95,'Ross','2016-05-11 09:32:53',95,3),(96,'Ima','2016-03-14 09:31:57',96,4),(97,'Cole','2016-10-18 08:40:47',97,6),(98,'Scarlet','2015-10-14 05:57:24',98,8),(99,'Kasper','2017-09-05 05:48:00',99,6),(100,'Alyssa','2017-05-17 18:19:07',100,5),(101,'Vance','2018-05-28 11:56:35',101,5);
+/*!40000 ALTER TABLE `Auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -102,10 +131,11 @@ DROP TABLE IF EXISTS `Canciones`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Canciones` (
   `id_canciones` int(11) NOT NULL AUTO_INCREMENT,
-  `nombres` varchar(45) DEFAULT NULL,
+  `nombre_cancion` varchar(100) DEFAULT NULL,
   `Artista_id_artista` int(11) NOT NULL,
   `Album_id_album` int(11) NOT NULL,
   `Genero_id_genero` int(11) NOT NULL,
+  `reproducciones` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`id_canciones`),
   KEY `Artista_id_artista` (`Artista_id_artista`),
   KEY `Album_id_album` (`Album_id_album`),
@@ -122,7 +152,7 @@ CREATE TABLE `Canciones` (
 
 LOCK TABLES `Canciones` WRITE;
 /*!40000 ALTER TABLE `Canciones` DISABLE KEYS */;
-INSERT INTO `Canciones` VALUES (2,'Plato',2,2,2),(3,'Madison',3,3,3),(4,'Irene',4,4,4),(5,'Sandra',5,5,5),(6,'Veronica',6,6,6),(7,'Kelsie',7,7,7),(8,'Leroy',8,8,8),(9,'Len',9,9,9),(10,'April',10,10,10),(11,'Macy',11,11,11),(12,'Sarah',12,12,12),(13,'Hammett',13,13,13),(14,'Gareth',14,14,14),(15,'Neve',15,15,15),(16,'Dylan',16,16,16),(17,'Lester',17,17,17),(18,'Kennan',18,18,18),(19,'Marny',19,19,19),(20,'Patience',20,20,20),(21,'Fritz',21,21,21),(22,'Uriel',22,22,22),(23,'Cairo',23,23,23),(24,'Rosalyn',24,24,24),(25,'Patrick',25,25,25),(26,'Flynn',26,26,26),(27,'Xerxes',27,27,27),(28,'Lesley',28,28,28),(29,'Forrest',29,29,29),(30,'Constance',30,30,30),(31,'Aspen',31,31,31),(32,'Jocelyn',32,32,32),(33,'Giacomo',33,33,33),(34,'Kieran',34,34,34),(35,'Lillith',35,35,35),(36,'Gretchen',36,36,36),(37,'Willa',37,37,37),(38,'Hop',38,38,38),(39,'Haviva',39,39,39),(40,'Brendan',40,40,40),(41,'Amanda',41,41,41),(42,'Zephania',42,42,42),(43,'Arden',43,43,43),(44,'Beverly',44,44,44),(45,'Chloe',45,45,45),(46,'Wyatt',46,46,46),(47,'Quincy',47,47,47),(48,'Wanda',48,48,48),(49,'Aileen',49,49,49),(50,'Upton',50,50,50),(51,'Hayley',51,51,51),(52,'Harriet',52,52,52),(53,'Noelani',53,53,53),(54,'Kato',54,54,54),(55,'Barclay',55,55,55),(56,'Martena',56,56,56),(57,'Brody',57,57,57),(58,'Nicole',58,58,58),(59,'Reed',59,59,59),(60,'Griffith',60,60,60),(61,'Lawrence',61,61,61),(62,'Camille',62,62,62),(63,'Amir',63,63,63),(64,'Otto',64,64,64),(65,'Jack',65,65,65),(66,'Patricia',66,66,66),(67,'Carter',67,67,67),(68,'Shellie',68,68,68),(69,'Noah',69,69,69),(70,'Hoyt',70,70,70),(71,'Flynn',71,71,71),(72,'Reece',72,72,72),(73,'Louis',73,73,73),(74,'Martha',74,74,74),(75,'Michelle',75,75,75),(76,'Cameron',76,76,76),(77,'Roary',77,77,77),(78,'Amos',78,78,78),(79,'Ray',79,79,79),(80,'Carly',80,80,80),(81,'Ciaran',81,81,81),(82,'Felix',82,82,82),(83,'Britanni',83,83,83),(84,'Quinn',84,84,84),(85,'Yvonne',85,85,85),(86,'Judah',86,86,86),(87,'Omar',87,87,87),(88,'Xyla',88,88,88),(89,'Benedict',89,89,89),(90,'Shannon',90,90,90),(91,'Aladdin',91,91,91),(92,'Luciana',92,92,92),(93,'Ayanna',93,93,93),(94,'Iola',94,94,94),(95,'Faith',95,95,95),(96,'Derek',96,96,96),(97,'Dale',97,97,97),(98,'Price',98,98,98),(99,'Ronan',99,99,99),(100,'Meredith',100,100,100),(101,'Louis',101,101,101);
+INSERT INTO `Canciones` VALUES (2,'Plato',2,2,2,'1000'),(3,'Madison',3,3,3,'2000'),(4,'Irene',4,4,4,'2500'),(5,'Sandra',5,5,5,'10050'),(6,'Veronica',6,6,6,'2345'),(7,'Kelsie',7,7,7,'23000'),(8,'Leroy',8,8,8,'1000000'),(9,'Len',9,9,9,'5000000'),(10,'April',10,10,10,'4567'),(11,'Macy',11,11,11,'45678'),(12,'Sarah',12,12,12,'12345'),(13,'Hammett',13,13,13,'12000'),(14,'Gareth',14,14,14,'12300'),(15,'Neve',15,15,15,'34000'),(16,'Dylan',16,16,16,'123000'),(17,'Lester',17,17,17,'34590'),(18,'Kennan',18,18,18,'6000000'),(19,'Marny',19,19,19,'4567'),(20,'Patience',20,20,20,'45678'),(21,'Fritz',21,21,21,'23400'),(22,'Uriel',22,22,22,'89000'),(23,'Cairo',23,23,23,'6545'),(24,'Rosalyn',24,24,24,'4567'),(25,'Patrick',25,25,25,'234'),(26,'Flynn',26,26,26,'4567'),(27,'Xerxes',27,27,27,'5677'),(28,'Lesley',28,28,28,'3445'),(29,'Forrest',29,29,29,'200000'),(30,'Constance',30,30,30,'200008'),(31,'Aspen',31,31,31,'3400000'),(32,'Jocelyn',32,32,32,'120000'),(33,'Giacomo',33,33,33,'3400'),(34,'Kieran',34,34,34,'5600'),(35,'Lillith',35,35,35,'450000'),(36,'Gretchen',36,36,36,'34000'),(37,'Willa',37,37,37,'78000'),(38,'Hop',38,38,38,'789000'),(39,'Haviva',39,39,39,'65000'),(40,'Brendan',40,40,40,'56000'),(41,'Amanda',41,41,41,'5600'),(42,'Zephania',42,42,42,'7800'),(43,'Arden',43,43,43,'9800'),(44,'Beverly',44,44,44,'7800'),(45,'Chloe',45,45,45,'678900'),(46,'Wyatt',46,46,46,'45670'),(47,'Quincy',47,47,47,'1200'),(48,'Wanda',48,48,48,'4555'),(49,'Aileen',49,49,49,'455767'),(50,'Upton',50,50,50,'456456'),(51,'Hayley',51,51,51,'454566'),(52,'Harriet',52,52,52,'66767'),(53,'Noelani',53,53,53,'567'),(54,'Kato',54,54,54,'56789'),(55,'Barclay',55,55,55,'90000'),(56,'Martena',56,56,56,'8000'),(57,'Brody',57,57,57,'70000'),(58,'Nicole',58,58,58,'50000'),(59,'Reed',59,59,59,'500'),(60,'Griffith',60,60,60,'400000'),(61,'Lawrence',61,61,61,'450000'),(62,'Camille',62,62,62,'5000'),(63,'Amir',63,63,63,'7000'),(64,'Otto',64,64,64,'200'),(65,'Jack',65,65,65,'30'),(66,'Patricia',66,66,66,'10'),(67,'Carter',67,67,67,'2'),(68,'Shellie',68,68,68,'3'),(69,'Noah',69,69,69,'6'),(70,'Hoyt',70,70,70,'7'),(71,'Flynn',71,71,71,'8'),(72,'Reece',72,72,72,'9'),(73,'Louis',73,73,73,'7768'),(74,'Martha',74,74,74,'7880'),(75,'Michelle',75,75,75,'78979'),(76,'Cameron',76,76,76,'340'),(77,'Roary',77,77,77,'56700'),(78,'Amos',78,78,78,'6700'),(79,'Ray',79,79,79,'78900'),(80,'Carly',80,80,80,'66700'),(81,'Ciaran',81,81,81,'7650'),(82,'Felix',82,82,82,'56530'),(83,'Britanni',83,83,83,'5670'),(84,'Quinn',84,84,84,'3450'),(85,'Yvonne',85,85,85,'12300'),(86,'Judah',86,86,86,'5600'),(87,'Omar',87,87,87,'789000'),(88,'Xyla',88,88,88,'7654'),(89,'Benedict',89,89,89,'4567'),(90,'Shannon',90,90,90,'7778909'),(91,'Aladdin',91,91,91,'77645'),(92,'Luciana',92,92,92,'345567678'),(93,'Ayanna',93,93,93,'455676'),(94,'Iola',94,94,94,'12345'),(95,'Faith',95,95,95,'455678'),(96,'Derek',96,96,96,'88989'),(97,'Dale',97,97,97,'56767889'),(98,'Price',98,98,98,'565676'),(99,'Ronan',99,99,99,'455600'),(100,'Meredith',100,100,100,'706'),(101,'Louis',101,101,101,'7800000');
 /*!40000 ALTER TABLE `Canciones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -465,6 +495,108 @@ LOCK TABLES `Usuario` WRITE;
 INSERT INTO `Usuario` VALUES (2,'Angelica','Nunez','Integer.in@tincidunt.ca','2038-12-29','Montana',2,2,2),(3,'Oscar','Moreno','dolor.nonummy@interdumligulaeu.edu','2052-05-09','Dahlia',3,3,3),(4,'Kylee','Lawson','Nullam.feugiat.placerat@nunc.net','1985-05-08','Cyrus',4,4,4),(5,'Marshall','Hammond','tempus@cubiliaCurae.edu','2069-11-27','Kamal',5,5,5),(6,'Asher','Guthrie','fringilla@mollis.co.uk','1979-10-26','Mia',6,6,6),(7,'Angela','Oneal','erat.nonummy@erat.ca','2057-05-18','Lydia',7,7,7),(8,'Camden','Underwood','magna@CuraePhasellus.com','1998-07-19','Kim',8,8,8),(9,'Joan','Roberson','sociis.natoque@nonquam.ca','2038-03-17','Peter',9,9,9),(10,'Noel','Charles','Sed.pharetra.felis@Mauris.net','2016-09-06','Madaline',10,10,10),(11,'Christen','Hendrix','dolor@ligulaNullam.edu','2031-12-23','Colt',11,11,11),(12,'Rafael','Martin','gravida.Praesent.eu@Ut.org','2031-11-17','Garrison',12,12,12),(13,'Bruce','Walker','nunc@condimentumeget.com','2057-01-07','Fuller',13,13,13),(14,'Kermit','Leach','turpis.vitae.purus@at.org','2040-03-18','Christen',14,14,14),(15,'Ross','Serrano','pede.Cum@tellusAeneanegestas.co.uk','1976-06-01','Isaiah',15,15,15),(16,'Petra','Burnett','tortor@tinciduntcongue.edu','1972-01-29','Winter',16,16,16),(17,'Cassady','Lancaster','sem@sedpede.edu','2006-02-27','Isabelle',17,17,17),(18,'Dacey','Simmons','eget.lacus@egestas.edu','2030-10-16','Hedda',18,18,18),(19,'Latifah','Emerson','Donec.est.Nunc@nonummyut.ca','2043-03-25','Audrey',19,19,19),(20,'Bo','Albert','Cras.eget.nisi@lectusconvallis.edu','2046-05-29','Amber',20,20,20),(21,'Troy','Sutton','pharetra.Nam@mollisDuissit.org','2039-03-21','Kato',21,21,21),(22,'Brynne','Rojas','ac@gravidasit.ca','1986-03-13','Paul',22,22,22),(23,'Lois','Dennis','sit@purusaccumsaninterdum.com','2000-01-16','Travis',23,23,23),(24,'Griffin','Dixon','nisi.dictum@nonummyac.org','1970-02-14','Quyn',24,24,24),(25,'Neve','Mathews','id@odio.org','2016-02-16','Omar',25,25,25),(26,'Patrick','Colon','magnis@tempuseu.net','2024-12-03','Logan',26,26,26),(27,'Shana','Mcgowan','ipsum@sitametconsectetuer.ca','2065-01-18','Stephanie',27,27,27),(28,'Uriah','Rush','lectus@ultricesposuere.edu','2034-12-04','Rae',28,28,28),(29,'Sacha','Pratt','vel@magnatellus.org','2036-08-30','Griffith',29,29,29),(30,'Rosalyn','Erickson','Aenean.eget.magna@arcuiaculis.co.uk','2031-02-28','Kitra',30,30,30),(31,'Amaya','Casey','Nulla.interdum@semegestas.ca','2016-11-28','George',31,31,31),(32,'Barrett','Tyson','odio.sagittis@turpisnon.edu','2066-03-17','Gareth',32,32,32),(33,'Caesar','Vazquez','quam.elementum.at@Suspendisse.co.uk','2044-08-12','Jennifer',33,33,33),(34,'Russell','Patterson','in.consequat@aliquet.ca','2006-12-02','Baker',34,34,34),(35,'Kylynn','Cruz','facilisis.magna@Phasellus.net','2053-08-10','Carolyn',35,35,35),(36,'Patience','Kirkland','orci.Ut@necmalesuada.org','1975-09-02','Dustin',36,36,36),(37,'Lee','Freeman','dapibus.rutrum.justo@estNunc.org','2050-06-12','Travis',37,37,37),(38,'Hector','Mccarthy','dui@risusDuisa.co.uk','2027-10-24','Emerald',38,38,38),(39,'Dean','Byrd','mollis.non.cursus@Nullaaliquet.edu','1996-05-08','Daryl',39,39,39),(40,'Rama','Lancaster','lectus.pede.et@utaliquam.com','2057-02-17','Phoebe',40,40,40),(41,'Addison','Hester','enim.Etiam.gravida@euismod.org','1979-02-19','Charity',41,41,41),(42,'Kylie','Foster','non.arcu@auctorMauris.ca','2068-12-05','Charde',42,42,42),(43,'Dai','Atkinson','ut.nulla@augueporttitorinterdum.net','2055-10-01','Arsenio',43,43,43),(44,'Madonna','Forbes','amet.ante@tellus.org','2020-08-07','Vielka',44,44,44),(45,'Yen','Patel','vel.venenatis@enimconsequatpurus.co.uk','2004-11-18','Jasper',45,45,45),(46,'Donovan','Rivers','Integer@Quisquepurussapien.co.uk','2017-04-24','Summer',46,46,46),(47,'Kane','Howard','placerat.Cras.dictum@maurisaliquameu.ca','2004-08-18','Linda',47,47,47),(48,'Emi','Vaughn','ut@loremauctorquis.co.uk','2050-11-21','Jonah',48,48,48),(49,'Zeph','Hodges','vulputate@lectus.com','2054-10-05','Caryn',49,49,49),(50,'Piper','Jordan','velit@Nullamut.ca','2014-10-03','Yetta',50,50,50),(51,'Curran','Moreno','eu.dolor@erat.co.uk','2064-05-31','Morgan',51,51,51),(52,'Clinton','Mccall','nec.ante@nascetur.org','2004-09-11','Dillon',52,52,52),(53,'Colby','Fuller','non.lacinia.at@atrisusNunc.com','2019-12-01','Keith',53,53,53),(54,'Joshua','Rollins','id.blandit@semperduilectus.com','2061-07-07','Armando',54,54,54),(55,'Lee','Morgan','Cras@ligulaNullamfeugiat.com','1980-10-06','Boris',55,55,55),(56,'Blaine','Paul','dolor.Fusce@eleifend.co.uk','2058-05-23','Nora',56,56,56),(57,'Irene','Perkins','non.dui@aliquetvel.ca','2003-01-28','Griffith',57,57,57),(58,'Calista','Macdonald','tellus.lorem.eu@sodalespurus.ca','2042-01-09','Stacey',58,58,58),(59,'Galena','Harrington','risus.Quisque@loremtristiquealiquet.ca','2042-01-24','Constance',59,59,59),(60,'Kibo','Thornton','Donec@consectetuer.co.uk','1995-10-08','Blair',60,60,60),(61,'Sophia','Freeman','placerat@dapibus.com','2029-08-07','Cameron',61,61,61),(62,'Nelle','Hill','aliquet@idblanditat.edu','2059-01-14','Jade',62,62,62),(63,'Curran','Moon','metus.Aenean@ligulaelitpretium.ca','2042-06-21','Fritz',63,63,63),(64,'Priscilla','Cobb','gravida.non@egestashendrerit.com','1998-11-22','Caldwell',64,64,64),(65,'Henry','Hudson','nulla.Integer@rutrumloremac.net','1971-11-17','Sybill',65,65,65),(66,'Branden','Kim','penatibus@arcuVestibulum.co.uk','2007-07-07','Galena',66,66,66),(67,'Allistair','Blake','Aliquam@disparturientmontes.org','2007-11-19','Fletcher',67,67,67),(68,'Norman','Burgess','ac.mattis.velit@Nulla.org','2050-07-17','Porter',68,68,68),(69,'Jacqueline','Hobbs','nisl.Nulla@vulputateveliteu.com','2016-06-22','Maya',69,69,69),(70,'Tanek','Bartlett','dui.Cum@Donec.ca','1995-12-29','Marsden',70,70,70),(71,'Stone','Joseph','sed.pede@gravidamaurisut.edu','1995-03-12','Blake',71,71,71),(72,'Katell','Phelps','eleifend@faucibusorci.com','2061-04-13','Yasir',72,72,72),(73,'Prescott','Fernandez','pulvinar.arcu.et@dolortempus.com','2058-06-09','Caesar',73,73,73),(74,'Lucy','Robertson','et.netus.et@penatibus.org','1983-06-25','Dennis',74,74,74),(75,'Howard','Hurley','dis@ullamcorperDuis.com','2057-11-04','Dara',75,75,75),(76,'Jaquelyn','Mcgowan','egestas@vestibulumloremsit.co.uk','2023-02-03','Garth',76,76,76),(77,'Colby','Faulkner','lorem.sit.amet@elitCurabitursed.ca','1974-07-04','Jack',77,77,77),(78,'Shana','Ruiz','eget.ipsum@Aeneanegetmagna.ca','2025-04-13','Brenden',78,78,78),(79,'Ella','Carver','pede@enim.com','1994-10-18','Silas',79,79,79),(80,'Nash','Lopez','nostra.per@Nuncmauris.net','2018-05-31','Bruno',80,80,80),(81,'Denton','Mcintosh','nec@Vivamus.ca','2015-10-30','Drew',81,81,81),(82,'Brock','Faulkner','lorem@ipsum.org','2008-06-08','Quynn',82,82,82),(83,'Beatrice','Mercado','Mauris.ut@velit.edu','2043-05-01','Yen',83,83,83),(84,'Kathleen','Mathews','ipsum@accumsan.com','2011-02-18','Knox',84,84,84),(85,'Lawrence','Mcbride','orci@odiotristiquepharetra.org','2062-05-14','Nicole',85,85,85),(86,'Joel','Barker','scelerisque.lorem@ultrices.ca','2066-11-08','Julian',86,86,86),(87,'Renee','Flores','luctus@leoinlobortis.ca','2002-03-15','Alana',87,87,87),(88,'Nicholas','Gilliam','amet@elementumloremut.ca','2067-05-24','Jolie',88,88,88),(89,'Connor','Larson','id.risus@quamPellentesquehabitant.edu','2067-10-30','Felicia',89,89,89),(90,'Nasim','Madden','augue@diam.org','2048-09-28','Mufutau',90,90,90),(91,'Brent','Wilkins','risus.Nulla@pretiumnequeMorbi.com','2051-12-28','Lucas',91,91,91),(92,'Robert','Dillard','at.arcu@velit.net','2053-02-17','Bianca',92,92,92),(93,'Yvette','Sims','nisi.nibh.lacinia@inmagna.ca','2033-06-05','Amber',93,93,93),(94,'Amethyst','Strong','malesuada.fringilla@Nam.com','2008-08-27','Armand',94,94,94),(95,'Hector','Pena','magna@sit.org','2020-01-25','Jamalia',95,95,95),(96,'Orla','Camacho','Proin.velit@eleifendegestasSed.ca','2021-10-21','Carissa',96,96,96),(97,'Kibo','Church','erat.semper.rutrum@venenatis.net','2066-01-14','Regina',97,97,97),(98,'Colby','Malone','arcu@urnaNullam.net','2067-12-09','Karina',98,98,98),(99,'Oleg','Graham','Fusce@Donecnibh.org','2049-01-01','Lacey',99,99,99),(100,'Odysseus','Salinas','est@atarcu.edu','1978-07-04','Yvette',100,100,100),(101,'Geraldine','Cooke','at.velit@imperdiet.co.uk','2019-04-07','Jaime',101,101,101);
 /*!40000 ALTER TABLE `Usuario` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary table structure for view `canciones_genero`
+--
+
+DROP TABLE IF EXISTS `canciones_genero`;
+/*!50001 DROP VIEW IF EXISTS `canciones_genero`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `canciones_genero` (
+  `nombre_cancion` tinyint NOT NULL,
+  `tipo_genero` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary table structure for view `canciones_mas_escuchadas1`
+--
+
+DROP TABLE IF EXISTS `canciones_mas_escuchadas1`;
+/*!50001 DROP VIEW IF EXISTS `canciones_mas_escuchadas1`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `canciones_mas_escuchadas1` (
+  `nombre_cancion` tinyint NOT NULL,
+  `nombre_album` tinyint NOT NULL,
+  `nombre_artista` tinyint NOT NULL,
+  `reproducciones` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary table structure for view `ingreso_usuarios1`
+--
+
+DROP TABLE IF EXISTS `ingreso_usuarios1`;
+/*!50001 DROP VIEW IF EXISTS `ingreso_usuarios1`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `ingreso_usuarios1` (
+  `fecha` tinyint NOT NULL,
+  `nombre` tinyint NOT NULL,
+  `cantRegistro` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Final view structure for view `canciones_genero`
+--
+
+/*!50001 DROP TABLE IF EXISTS `canciones_genero`*/;
+/*!50001 DROP VIEW IF EXISTS `canciones_genero`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `canciones_genero` AS select `Canciones`.`nombre_cancion` AS `nombre_cancion`,`Genero`.`tipo_genero` AS `tipo_genero` from (`Canciones` join `Genero`) where `Canciones`.`id_canciones` = `Genero`.`id_genero` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `canciones_mas_escuchadas1`
+--
+
+/*!50001 DROP TABLE IF EXISTS `canciones_mas_escuchadas1`*/;
+/*!50001 DROP VIEW IF EXISTS `canciones_mas_escuchadas1`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `canciones_mas_escuchadas1` AS select `Canciones`.`nombre_cancion` AS `nombre_cancion`,`Album`.`nombre_album` AS `nombre_album`,`Artista`.`nombre_artista` AS `nombre_artista`,`Canciones`.`reproducciones` AS `reproducciones` from ((`Canciones` join `Album`) join `Artista`) where `Canciones`.`id_canciones` = `Artista`.`id_artista` and `Album`.`id_album` = `Artista`.`id_artista` and `Canciones`.`reproducciones` > 1000 order by `Canciones`.`reproducciones` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `ingreso_usuarios1`
+--
+
+/*!50001 DROP TABLE IF EXISTS `ingreso_usuarios1`*/;
+/*!50001 DROP VIEW IF EXISTS `ingreso_usuarios1`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `ingreso_usuarios1` AS select `Auditoria`.`fecha` AS `fecha`,`Usuario`.`nombre` AS `nombre`,`Auditoria`.`cantRegistro` AS `cantRegistro` from (`Auditoria` join `Usuario`) where `Auditoria`.`id_auditoria` = `Usuario`.`id_Usuario` order by `Auditoria`.`cantRegistro` desc */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -475,4 +607,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-31 20:33:11
+-- Dump completed on 2020-06-01 19:55:38
